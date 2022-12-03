@@ -1,1 +1,156 @@
+//---------ROOT----------------
 @import 'RESET.scss';
+
+:root {
+	--bg-color:#01131E;
+	--block-color:#011C2C;
+}
+
+body {
+	background: var(--bg-color);
+	font-family: 'Roboto Mono';
+	font-style: normal;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+
+.big-text {
+	font-size: 26px;
+	line-height: 29px;
+	@media(max-width:400px) {
+		font-size: 22px;
+		line-height: 29px;
+	}
+}
+
+.button {
+	display: inline-block;
+	font-size: 22px;
+	line-height: 24px;
+	padding: 8px 31px;
+	@media(max-width:800px) {
+		font-size: 18px;
+		padding: 8px 10px;
+	}
+}
+
+
+
+//------------HEADER----------------------------
+.header {
+
+	&__container {
+		max-width: 1300px;
+		margin: 0 auto;
+		padding: 22px 20px;
+		display: flex;
+		justify-content: end;
+		@media(max-width:800px) {
+			padding: 16px 10px;
+		}
+	}
+	&__github {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		background: rgba(0, 39, 63, 1);
+		border-radius: 5px;
+		transition: 0.3s;
+		cursor: pointer;
+		&:hover {
+			background: #E9E9E9;
+			path {
+				stroke: rgba(0, 65, 104, 1);
+			}
+		}
+	}
+}
+
+//-----------------TIMER------------------------
+.timer {
+	padding-top: 5%;
+	&__container {
+		
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	&__block {
+		background: var(--block-color);
+		flex-direction: column;
+		text-align: center;
+		padding: 18px 23px 54px 23px;
+		border-radius: 4px;
+	}
+
+	&__header {
+	}
+
+	&__info {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		column-gap: 30px;
+		margin: 35px 0 44px 0;
+		@media(max-width:800px) {
+			margin: 25px 0 34px 0;
+		}
+	}
+
+	&__col {
+		text-align: center;
+	}
+
+	&__value {
+		display: inline-block;
+		padding: 12px 0px;
+		font-size: 45px;
+		line-height: 59px;
+		border: 1px solid #DBDBDB;
+		border-radius: 4px;
+		width: 100%;
+	}
+
+	&__what {
+		margin-top: 12px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	&__buttons {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		column-gap: 13px;
+	}
+
+	&__button {
+		color: white;
+		border-radius: 3px;
+	}
+}
+
+.start {
+	background: #03AE85;
+	&:hover {
+		background: #009471;
+	}
+}
+
+.pause {
+	border: 1px solid #D1D1D1;
+	border-radius: 3px;
+	background: var(--bg-block);
+	&:hover {
+		background: #D1D1D1;
+		color: var(--block-color);
+	}
+}
+
+.reset {
+	background: #FD6259;
+	&:hover {
+		background: #d73e36;
+	}
+}

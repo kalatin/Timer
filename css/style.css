@@ -70,3 +70,149 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+:root {
+  --bg-color:#01131E;
+  --block-color:#011C2C;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.big-text {
+  font-size: 26px;
+  line-height: 29px;
+}
+@media (max-width: 400px) {
+  .big-text {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+.button {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 24px;
+  padding: 8px 31px;
+}
+@media (max-width: 800px) {
+  .button {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+}
+
+.header__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 22px 20px;
+  display: flex;
+  justify-content: end;
+}
+@media (max-width: 800px) {
+  .header__container {
+    padding: 16px 10px;
+  }
+}
+.header__github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgb(0, 39, 63);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header__github:hover {
+  background: #E9E9E9;
+}
+.header__github:hover path {
+  stroke: rgb(0, 65, 104);
+}
+
+.timer {
+  padding-top: 5%;
+}
+.timer__container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.timer__block {
+  background: var(--block-color);
+  flex-direction: column;
+  text-align: center;
+  padding: 18px 23px 54px 23px;
+  border-radius: 4px;
+}
+.timer__info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin: 35px 0 44px 0;
+}
+@media (max-width: 800px) {
+  .timer__info {
+    margin: 25px 0 34px 0;
+  }
+}
+.timer__col {
+  text-align: center;
+}
+.timer__value {
+  display: inline-block;
+  padding: 12px 0px;
+  font-size: 45px;
+  line-height: 59px;
+  border: 1px solid #DBDBDB;
+  border-radius: 4px;
+  width: 100%;
+}
+.timer__what {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.timer__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 13px;
+       column-gap: 13px;
+}
+.timer__button {
+  color: white;
+  border-radius: 3px;
+}
+
+.start {
+  background: #03AE85;
+}
+.start:hover {
+  background: #009471;
+}
+
+.pause {
+  border: 1px solid #D1D1D1;
+  border-radius: 3px;
+  background: var(--bg-block);
+}
+.pause:hover {
+  background: #D1D1D1;
+  color: var(--block-color);
+}
+
+.reset {
+  background: #FD6259;
+}
+.reset:hover {
+  background: #d73e36;
+}
