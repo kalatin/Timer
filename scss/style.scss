@@ -70,9 +70,8 @@ body {
 
 //-----------------TIMER------------------------
 .timer {
-	padding-top: 5%;
+	padding-top: 2%;
 	&__container {
-		
 		max-width: 700px;
 		margin: 0 auto;
 		padding: 0 15px;
@@ -82,7 +81,7 @@ body {
 		background: var(--block-color);
 		flex-direction: column;
 		text-align: center;
-		padding: 18px 23px 54px 23px;
+		padding: 18px 23px;
 		border-radius: 4px;
 	}
 
@@ -93,7 +92,7 @@ body {
 		display: grid;
 		grid-template-columns: repeat(3,1fr);
 		column-gap: 30px;
-		margin: 35px 0 44px 0;
+		margin: 35px 0;
 		@media(max-width:800px) {
 			margin: 25px 0 34px 0;
 		}
@@ -138,19 +137,67 @@ body {
 	}
 }
 
-.pause {
-	border: 1px solid #D1D1D1;
-	border-radius: 3px;
-	background: var(--bg-block);
+.stop {
+	background: rgb(255, 74, 65);
 	&:hover {
-		background: #D1D1D1;
-		color: var(--block-color);
+		background: rgb(255, 54, 44);
+	}
+}
+
+.new-lap {
+	background: #D1D1D1;
+	color: var(--block-color);
+	&:hover {
+		background: #afafaf;	
 	}
 }
 
 .reset {
-	background: #FD6259;
+	background: #ff9318;
 	&:hover {
-		background: #d73e36;
+		background:#dd7d0f;
+	}
+}
+
+//----------LAP-----------
+
+.lap {
+	margin-top: 20px;
+	&__container {
+		
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	&__block {
+		background: var(--block-color);
+		flex-direction: column;
+		text-align: center;
+		padding: 18px 23px;
+		border-radius: 4px;
+	}
+
+	&__header {
+		font-weight: 800;
+	}
+
+	&__line {
+		height: 2px;
+		width: 30%;
+		background: #D1D1D1;
+		margin: 10px auto 15px auto;
+		border-radius: 5px;
+	}
+
+	&__info {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+	}
+
+	&__row {
+		font-size: 20px;
 	}
 }
